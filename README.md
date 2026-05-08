@@ -54,7 +54,17 @@ The `no_legitimacy` condition switched to heavy STRIKE usage (86%) which makes m
 
 The sanction threshold sweep didn't show a huge difference between 0.40, 0.60, and 0.80 in terms of final reward (~63-71 range). The 0.40 threshold did converge slightly higher which aligns with the idea that earlier sanctions force the agent to learn diplomacy sooner.
 
-## Files
+## How the repo is organized
+
+```
+Final_Project/
+├── sovereign_env.py   # the environment — all game logic lives here
+├── train.py           # runs all experiments and saves models
+├── evaluate.py        # loads models, evaluates, generates plots
+├── README.md
+├── models/            # saved PPO models + reward logs (generated after training)
+└── plots/             # all plots (generated after evaluate.py)
+```
 
 `sovereign_env.py` — the whole environment. Graph setup, all action logic, defender AI, combat, reward function, ablation flags.
 
